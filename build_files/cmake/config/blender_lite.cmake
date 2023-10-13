@@ -83,3 +83,36 @@ set(WITH_CYCLES_EMBREE       OFF CACHE BOOL "" FORCE)
 set(WITH_CYCLES_OSL          OFF CACHE BOOL "" FORCE)
 set(WITH_CYCLES_PATH_GUIDING OFF CACHE BOOL "" FORCE)
 set(WITH_OPENVDB_BLOSC       OFF CACHE BOOL "" FORCE)
+
+
+set(WITH_HEADLESS            ON  CACHE BOOL "" FORCE)
+
+# disable audio, its possible some devs may want this but for now disable
+# so the python module doesn't hold the audio device and loads quickly.
+set(WITH_AUDASPACE           OFF CACHE BOOL "" FORCE)
+set(WITH_CODEC_FFMPEG        OFF CACHE BOOL "" FORCE)
+set(WITH_CODEC_SNDFILE       OFF CACHE BOOL "" FORCE)
+set(WITH_COREAUDIO           OFF CACHE BOOL "" FORCE)
+set(WITH_JACK                OFF CACHE BOOL "" FORCE)
+set(WITH_OPENAL              OFF CACHE BOOL "" FORCE)
+set(WITH_PULSEAUDIO          OFF CACHE BOOL "" FORCE)
+set(WITH_SDL                 OFF CACHE BOOL "" FORCE)
+set(WITH_WASAPI              OFF CACHE BOOL "" FORCE)
+
+# other features which are not especially useful as a python module
+set(WITH_X11_XINPUT          OFF CACHE BOOL "" FORCE)
+set(WITH_INPUT_NDOF          OFF CACHE BOOL "" FORCE)
+
+
+#WITH_VULKAN_BACKEND
+
+set(WITH_VULKAN_BACKEND OFF CACHE BOOL "" FORCE)
+
+#WITH_VULKAN_GUARDEDALLOC
+set(WITH_VULKAN_GUARDEDALLOC OFF CACHE BOOL "" FORCE)
+
+
+
+
+
+
