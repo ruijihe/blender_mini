@@ -26,7 +26,7 @@ if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
 endif()
 
 cmake_minimum_required(VERSION 3.10)
-
+set(CMAKE_TOOLCHAIN_FILE "/home/rock/vcpkg/scripts/buildsystems/vcpkg.cmake")
 if(NOT EXECUTABLE_OUTPUT_PATH)
   set(FIRST_RUN TRUE)
 else()

@@ -1,7 +1,14 @@
 # SPDX-FileCopyrightText: 2013 Blender Authors
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
-
+find_package(fmt CONFIG REQUIRED)
+find_package(PNG REQUIRED)
+find_package(Boost REQUIRED COMPONENTS thread chrono date_time atomic filesystem)
+find_package(OpenEXR REQUIRED)
+find_package(OpenColorIO CONFIG REQUIRED)
+find_package(OpenImageIO CONFIG REQUIRED)
+#TBB
+find_package(TBB CONFIG REQUIRED)
 set(INC
   .
   ..
@@ -23,7 +30,15 @@ set(SRC
 )
 
 set(LIB
-  ${OPENIMAGEIO_LIBRARIES}
+  #${OPENIMAGEIO_LIBRARIES}
+  fmt::fmt 
+  PNG::PNG 
+  Boost::boost Boost::thread Boost::chrono Boost::date_time Boost::atomic Boost::filesystem
+  OpenEXR::OpenEXR 
+  OpenColorIO::OpenColorIO 
+  OpenImageIO::OpenImageIO
+  OpenImageIO::OpenImageIO_Util
+  TBB::tbb TBB::tbbmalloc
   PRIVATE bf::blenlib
   PRIVATE bf::dna
   PRIVATE bf::intern::guardedalloc
